@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+    <color name="appwidget_text">#ffffffff</color>
+    <drawable name="translucent_background">#e0000000</drawable>
+    <color name="transparent">#00000000</color>
+	<color name="gray">#AFAFAF</color>
+	<color name="devide_line">#CBCED2</color>
+	<color name="black_semi_transparent">#B2000000</color>
+    <color name="background">#e5e5e5</color>
+    <color name="half_black">#808080</color>
+    <color name="white">#fafafa</color>
+    <color name="white_pressed">#f1f1f1</color>
+    <color name="pink">#e91e63</color>
+    <color name="pink_pressed">#ec407a</color>
+    <color name="blue_semi_transparent">#805677fc</color>
+    <color name="blue_semi_transparent_pressed">#80738ffe</color>
+    <color name="card_line_color">#ffF2F2F2</color>
+    <!--深藍色2d5d82  7FDADB -->
+    <color name="style_color_primary">#7FDADB</color>
+    <!--亮綠02c754  深绿006633  
+                  亚麻色    EFE8CB  D6CFB4 
+                 红色   EC7070   D36363
+    -->
+    
+    <color name="btn_send_normal">#EC7070</color>
+    <color name="btn_send_pressed">#D36363</color>
+    
+    <color name="light_green">#02c754</color>
+    <color name="dark_green">#006633</color>
+
+    <color name="primary">#607D8B</color>
+    <color name="primary_dark">#455A64</color>
+    <color name="accent">#536DFE</color>
+
+
+    <color name="primary2">#F44336</color>
+    <color name="primary_dark2">#D32F2F</color>
+    <color name="accent2">#FFAB00</color>
+</resources>
+

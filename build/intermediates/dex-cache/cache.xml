@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="E:\coding\github\LightTrans\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="E:\coding\github\LightTrans\app\build\intermediates\pre-dexed\debug\classes-fefe5af5d7d153bd05c916de4032635f3c1e6b29.jar" />
+    </item>
+    <item
+        jar="E:\coding\github\LightTrans\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="E:\coding\github\LightTrans\app\build\intermediates\pre-dexed\debug\classes-a91d85bb9bcdf22c9a0ca8224f6b45a9d8e4b158.jar" />
+    </item>
+    <item
+        jar="D:\Program Files\Android SDK\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="E:\coding\github\LightTrans\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-d84d35d82751ea226bdd6d98d8511203fbe8aa73.jar" />
+    </item>
+    <item
+        jar="E:\coding\github\LightTrans\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e0b0c35d02308b270015a74cada4887e2e49b889">
+        <dex dex="E:\coding\github\LightTrans\app\build\intermediates\pre-dexed\debug\classes-88ad5a1a1fa94338d2073411c6b1faea57dfb45e.jar" />
+    </item>
+    <item
+        jar="E:\coding\github\LightTrans\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
+        <dex dex="E:\coding\github\LightTrans\app\build\intermediates\pre-dexed\debug\classes-a58937d332525981f0b802ec61ed0dd49fdd402b.jar" />
+    </item>
+    <item
+        jar="E:\coding\github\LightTrans\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
+        <dex dex="E:\coding\github\LightTrans\app\build\intermediates\pre-dexed\debug\classes-d3c8991fddc6f4bebe9f381140f8cf26ca3746a3.jar" />
+    </item>
+    <item
+        jar="E:\coding\github\LightTrans\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="E:\coding\github\LightTrans\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-6d7f82286dec97394e1215a17c31c23a61c75b8a.jar" />
+    </item>
+
+</items>

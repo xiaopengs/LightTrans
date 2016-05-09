@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?><!--drawable/btn_following.xml-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false">
+        <layer-list>
+            <item android:bottom="1dp" android:left="1dp" android:right="1dp" android:top="1dp">
+                <shape android:shape="rectangle">
+                    <!-- 
+                    <solid android:color="@color/light_green" />
+                    -->
+                    <stroke
+            		android:width="1dp"
+            		android:color="@color/btn_send_normal" />
+                    <corners android:radius="4dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_pressed="true">
+        <shape android:bottom="0dp" android:left="2dp" android:right="0dp" android:shape="rectangle" android:top="2dp">
+            <solid android:color="@color/btn_send_pressed" />
+            <!--  
+            <stroke
+            android:width="1dp"
+            android:color="@color/btn_send_pressed" />
+            -->
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+
+</selector>

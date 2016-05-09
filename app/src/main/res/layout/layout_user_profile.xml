@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/view_user_profile_header"/>
+    
+    <Button
+        android:id="@+id/btn_receive"
+        android:background="@drawable/ps_button_flat_user2"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:textColor="#EC7070"
+        android:text="Receive" />
+    
+    <Button
+        android:id="@+id/btn_send"
+        android:background="@drawable/ps_button_flat_user"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:textColor="#ffffff"
+        android:text="Send" />
+    
+</LinearLayout>
