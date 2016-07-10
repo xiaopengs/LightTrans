@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <cn.tycoon.lighttrans.ui.view.RadarBgView
+        android:id="@+id/radar_bg_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <cn.tycoon.lighttrans.ui.view.RadarMembersView
+        android:id="@+id/radar_member_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/radar_bg_view"
+        android:layout_alignLeft="@id/radar_bg_view"
+        android:layout_alignRight="@id/radar_bg_view"
+        android:layout_alignTop="@id/radar_bg_view" />
+
+    <cn.tycoon.lighttrans.ui.view.RadaScanView
+        android:id="@+id/radar_scan_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

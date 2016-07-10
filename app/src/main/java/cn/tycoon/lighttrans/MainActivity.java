@@ -1,24 +1,25 @@
 package cn.tycoon.lighttrans;
 
 import android.app.Activity;
+import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.common.api.GoogleApiClient;
+import java.util.ArrayList;
 
 import cn.tycoon.lighttrans.fileManager.AbstractFilePickerFragment;
 import cn.tycoon.lighttrans.fileManager.FilePickerActivity;
+import cn.tycoon.lighttrans.ui.activity.SearchDeviceActivity;
 import cn.tycoon.lighttrans.utils.ImageUtils;
 
 
@@ -27,11 +28,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private ImageView mPhoto;
     private Button mBtnReceiver;
     private Button mBtnSender;
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    private GoogleApiClient client;
+    private TextView mTextView;
 
 
     @Override
@@ -41,12 +38,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mPhoto = (ImageView) findViewById(R.id.ivUserProfilePhoto);
         mBtnReceiver = (Button) findViewById(R.id.btn_receive);
         mBtnSender = (Button) findViewById(R.id.btn_send);
+        mTextView = (TextView)findViewById(R.id.tips_tv);
         mBtnReceiver.setOnClickListener(this);
         mBtnSender.setOnClickListener(this);
         initProfile(this);
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
     private void initProfile(Context c) {
@@ -109,40 +104,59 @@ public class MainActivity extends Activity implements View.OnClickListener {
     @Override
     public void onStart() {
         super.onStart();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client.connect();
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "Main Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
-                Uri.parse("http://host/path"),
-                // TODO: Make sure this auto-generated app URL is correct.
-                Uri.parse("android-app://cn.tycoon.lighttrans/http/host/path")
-        );
-        AppIndex.AppIndexApi.start(client, viewAction);
     }
 
     @Override
     public void onStop() {
         super.onStop();
+    }
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "Main Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
-                Uri.parse("http://host/path"),
-                // TODO: Make sure this auto-generated app URL is correct.
-                Uri.parse("android-app://cn.tycoon.lighttrans/http/host/path")
-        );
-        AppIndex.AppIndexApi.end(client, viewAction);
-        client.disconnect();
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode,
+                                    Intent data) {
+        if ((CODE_SD == requestCode ) &&
+                resultCode == Activity.RESULT_OK) {
+            if (data.getBooleanExtra(FilePickerActivity.EXTRA_ALLOW_MULTIPLE,
+                    false)) {
+
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    ClipData clip = data.getClipData();
+                    StringBuilder sb = new StringBuilder();
+
+                    if (clip != null) {
+                        for (int i = 0; i < clip.getItemCount(); i++) {
+                            sb.append(clip.getItemAt(i).getUri().toString());
+                            sb.append("\n");
+                        }
+                    }
+
+                    mTextView.setText(sb.toString());
+                    gotoSearchActivity();
+
+                } else {
+                    ArrayList<String> paths = data.getStringArrayListExtra(
+                            FilePickerActivity.EXTRA_PATHS);
+                    StringBuilder sb = new StringBuilder();
+
+                    if (paths != null) {
+                        for (String path : paths) {
+                            sb.append(path);
+                            sb.append("\n");
+                        }
+                    }
+                    mTextView.setText(sb.toString());
+                }
+            } else {
+                mTextView.setText(data.getData().toString());
+            }
+        }
+    }
+
+    private void gotoSearchActivity(){
+        Intent i = new Intent(MainActivity.this,
+                SearchDeviceActivity.class);
+        startActivity(i);
+
     }
 }

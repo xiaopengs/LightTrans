@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/troop_nearby_mem_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/style_color_primary"
+    android:orientation="vertical" >
+
+    <!-- Title -->
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:gravity="center_vertical"
+        android:padding="0px" >
+
+        <TextView
+            android:id="@+id/ivTitleName"
+            style="@style/TitleText"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="扫描中..." />
+
+        <TextView
+            android:id="@+id/ivTitleBtnLeft"
+            style="@style/TitleBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:maxWidth="88dp"
+            android:minWidth="55dp"
+            android:singleLine="true"
+            android:text="Back"/>
+        <!-- android:background="@drawable/top_back_left_selector" -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:maxWidth="88dp"
+            android:minWidth="55dp"
+            android:id="@+id/ivTitleBtnRightText"
+            style="@style/TitleBtn"
+            android:text="OK" />
+    </RelativeLayout>
+<View android:layout_width="match_parent"
+      android:layout_height="1px"
+      android:background="@color/divide_line_color"/>
+    <cn.tycoon.lighttrans.ui.view.RadarView
+        android:id="@+id/radar_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1" />
+
+    <!--<com.tencent.tim.troop.widget.ScaleGallery-->
+        <!--android:id="@+id/cover_flow"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/qq_troop_nearby_member_card_h"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_marginBottom="@dimen/qq_troop_nearby_member_card_margin_bottom"-->
+        <!--android:spacing="-15dp" />-->
+
+</LinearLayout>

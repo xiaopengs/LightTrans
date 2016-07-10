@@ -157,4 +157,10 @@ public abstract class AbstractFilePickerActivity<T> extends AppCompatActivity
         setResult(Activity.RESULT_CANCELED);
         finish();
     }
+
+    @Override
+    public void onBackPressed() {
+
+        super.onBackPressed();
+    }
 }

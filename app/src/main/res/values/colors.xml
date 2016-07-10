@@ -30,8 +30,9 @@
     <color name="blue_semi_transparent">#805677fc</color>
     <color name="blue_semi_transparent_pressed">#80738ffe</color>
     <color name="card_line_color">#ffF2F2F2</color>
+    <color name="divide_line_color">#D2D2D2</color>
     <!--深藍色2d5d82  7FDADB -->
-    <color name="style_color_primary">#7FDADB</color>
+    <color name="style_color_primary">#32C5BD</color>
     <!--亮綠02c754  深绿006633  
                   亚麻色    EFE8CB  D6CFB4 
                  红色   EC7070   D36363
@@ -51,5 +52,11 @@
     <color name="primary2">#F44336</color>
     <color name="primary_dark2">#D32F2F</color>
     <color name="accent2">#FFAB00</color>
+
+    <color name="primary3">#32C5BD</color>
+    <color name="primary_dark3">#EC7070</color>
+    <color name="accent3">#FFAB00</color>
+
+    <color name="skin_bar_text">#FFFFFF</color>
 </resources>
 
